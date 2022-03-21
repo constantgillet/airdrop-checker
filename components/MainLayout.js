@@ -4,10 +4,10 @@ import Container from "./Container";
 export function MainLayout({ className, children }) {
   return (
     <>
-      <Container>
+      <div>
         <Header />
         <div>{children}</div>
-      </Container>
+      </div>
     </>
   );
 }

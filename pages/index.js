@@ -1,12 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import styled from "styled-components";
-import Container from "../components/Container";
-import Header from "../components/Header";
-
-const Test = styled.h1`
-  color: blue;
-`;
+//import Header from "../components/Header";
 
 export default function Home() {
   return (

@@ -1,5 +1,4 @@
-import "../styles/reset.css";
-import { GlobalStyle } from "../styles/style";
+import "../styles/globals.css";
 import nProgress from "nprogress";
 import "nprogress/nprogress.css";
 import Router from "next/router";
@@ -14,7 +13,6 @@ Router.events.on("routeChangeError", () => nProgress.done());
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
       <div>
         <MainLayout>
           <Component {...pageProps} />
