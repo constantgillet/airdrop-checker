@@ -3,6 +3,7 @@ import nProgress from "nprogress";
 import "nprogress/nprogress.css";
 import Router from "next/router";
 import { MainLayout } from "../components/MainLayout";
+import { ThemeProvider } from "next-themes";
 
 nProgress.configure({ showSpinner: false });
 
@@ -13,11 +14,11 @@ Router.events.on("routeChangeError", () => nProgress.done());
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <div>
+      <ThemeProvider attribute="class">
         <MainLayout>
           <Component {...pageProps} />
         </MainLayout>
-      </div>
+      </ThemeProvider>
     </>
   );
 }
