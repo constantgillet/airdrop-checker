@@ -4,8 +4,11 @@ import Container from "../components/Container";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import airdropIllustration from "../assets/images/home-image.png";
+import { useState } from "react";
 
 export default function Home() {
+  const [address, setAddress] = useState("");
+
   return (
     <div>
       <Head>
@@ -42,9 +45,11 @@ export default function Home() {
               airdrops
             </p>
             <Input
-              placeholder="0x8604... 23 your wallet address"
+              placeholder="0x8604d... or wallet your address"
               block
               align="center"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
             />
             <Button className="text-center">Check my airdrops</Button>
           </div>
