@@ -5,6 +5,7 @@ import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import airdropIllustration from "../assets/images/home-image.png";
 import { useState } from "react";
+import { Footer } from "../components/Footer";
 
 export default function Home() {
   const [address, setAddress] = useState("");
@@ -58,6 +59,7 @@ export default function Home() {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 }
