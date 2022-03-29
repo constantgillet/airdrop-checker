@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 export default function Header({ className }) {
   return (
-    <div className="bg-slate-50 dark:bg-slate flex relative justify-between max-w-5xl mx-auto mt-3 border dark:border-gray-800 rounded-xl p-4">
+    <div className="bg-slate-50 dark:bg-slate flex relative justify-between max-w-5xl mx-auto mt-3 border dark:border-gray-800 rounded-md p-4">
       <div>
         <ul className={"flex"}>
           <NavItem href={"/"}>Home</NavItem>

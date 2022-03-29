@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Container from "../components/Container";
 import { Input } from "../components/Input";
+import { Button } from "../components/Button";
 //import Header from "../components/Header";
 
 export default function Home() {
@@ -40,7 +41,8 @@ export default function Home() {
               Enter your address EVM address for checking if you can claim
               airdrops
             </p>
-            <Input placeholder="0x8604... 23 your wallet address" />
+            <Input placeholder="0x8604... 23 your wallet address" block />
+            <Button className="text-center">Check my airdrops</Button>
           </div>
           <div className="col-span-6">index + 1</div>
         </div>

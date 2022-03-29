@@ -8,7 +8,12 @@ module.exports = {
     extend: {
       colors: {
         slate: "#1F1D35",
+        primary: "#4152EA",
       },
+    },
+    borderRadius: {
+      sm: "6px",
+      md: "12px",
     },
   },
   plugins: [],
