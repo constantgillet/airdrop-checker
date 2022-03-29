@@ -17,3 +17,8 @@
         background: linear-gradient(360deg, #171629 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(224.99deg, rgba(0, 0, 0, 0.22) 12.97%, rgba(236, 98, 68, 0) 46.53%), radial-gradient(105.43% 215.97% at 63.3% 50%, rgba(0, 0, 0, 0.2) 0.3%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(137.11deg, #171629 13.71%, #638CA9 67.82%);
     }
 }
+
+#nprogress .bar {
+    height: 4px;
+    background: linear-gradient(137.11deg, #7A4FA3 13.71%, #638CA9 67.82%);
+}

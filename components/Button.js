@@ -8,9 +8,13 @@ export function Button({
   return (
     <button
       className={
-        `rounded-sm px-3 py-3
+        `rounded-sm px-3 py-3 transition-colors border
          ${block ? "block w-full" : ""}
-         ${type === "primary" ? "bg-primary" : "bg-primary"}` +
+         ${
+           type === "primary"
+             ? "bg-primary-600 hover:bg-primary-700 border-primary-500 hover:border-primary-600"
+             : "bg-primary-600"
+         }` +
         " " +
         className
       }
