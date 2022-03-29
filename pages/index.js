@@ -41,7 +41,11 @@ export default function Home() {
               Enter your address EVM address for checking if you can claim
               airdrops
             </p>
-            <Input placeholder="0x8604... 23 your wallet address" block />
+            <Input
+              placeholder="0x8604... 23 your wallet address"
+              block
+              align="center"
+            />
             <Button className="text-center">Check my airdrops</Button>
           </div>
           <div className="col-span-6">
