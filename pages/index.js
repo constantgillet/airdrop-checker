@@ -4,6 +4,10 @@ import Container from "../components/Container";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import airdropIllustration from "../assets/images/home-image.png";
+import heticLogotype from "../assets/images/hetic.png";
+import etherScanLogotype from "../assets/images/etherscan-logo-light.webp";
+import consensysLogotype from "../assets/images/consensy.png";
+import cosmosLogotype from "../assets/images/cosmos-logo-white.png";
 import { useState } from "react";
 import { Footer } from "../components/Footer";
 
@@ -58,8 +62,38 @@ export default function Home() {
             <img src={airdropIllustration.src} className="my-0 mx-auto w-4/6" />
           </div>
         </div>
+        <div className="grid grid-cols-12 gap-x-8 my-14">
+          <div className="col-span-6">test</div>
+          <div className="col-span-6 space-y-8 text-center">
+            <h2 className="text-center text-2xl font-bold">
+              Supported blockchains & layer 2
+            </h2>
+            <p className="text-center max-w-xs mx-auto">
+              Enter your address EVM address for checking if you can claim
+              airdrops
+            </p>
+          </div>
+        </div>
       </Container>
+      <div className="dark:bg-preBackground py-6">
+        <Container>
+          <div className="grid grid-cols-12">
+            <Partner logotypeSrc={heticLogotype.src} />
+            <Partner logotypeSrc={etherScanLogotype.src} />
+            <Partner logotypeSrc={consensysLogotype.src} />
+            <Partner logotypeSrc={cosmosLogotype.src} />
+          </div>
+        </Container>
+      </div>
       <Footer />
+    </div>
+  );
+}
+
+function Partner({ logotypeSrc = "" }) {
+  return (
+    <div className="col-span-3 flex justify-center items-center">
+      <img src={logotypeSrc} className="opacity-40 w-4/5 h-auto mx-auto" />
     </div>
   );
 }
