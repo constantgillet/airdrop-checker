@@ -8,7 +8,7 @@ export function Button({
   return (
     <button
       className={
-        `rounded-sm px-3 py-3 transition-colors border
+        `rounded-sm px-4 py-3 transition-colors border
          ${block ? "block w-full" : ""}
          ${
            type === "primary"

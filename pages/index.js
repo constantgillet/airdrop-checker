@@ -69,8 +69,7 @@ export default function Home() {
               Supported blockchains & layer 2
             </h2>
             <p className="text-center max-w-xs mx-auto">
-              Enter your address EVM address for checking if you can claim
-              airdrops
+              New blockchains are often added to our tool
             </p>
           </div>
         </div>
