@@ -8,8 +8,11 @@ import heticLogotype from "../assets/images/hetic.png";
 import etherScanLogotype from "../assets/images/etherscan-logo-light.webp";
 import consensysLogotype from "../assets/images/consensy.png";
 import cosmosLogotype from "../assets/images/cosmos-logo-white.png";
+import polygonLogotype from "../assets/images/chains/polygon.png";
+import avaxLogotype from "../assets/images/chains/avax.png";
 import { useState } from "react";
 import { Footer } from "../components/Footer";
+import Image from "next/image";
 
 export default function Home() {
   const [address, setAddress] = useState("");
@@ -63,7 +66,14 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-12 gap-x-8 my-14">
-          <div className="col-span-6">test</div>
+          <div className="col-span-6">
+            <div className="grid grid-cols-12 gap-x-8 my-14">
+              <ChainItem logotypeSrc={polygonLogotype} name="Polygon" />
+              <ChainItem logotypeSrc={avaxLogotype} name="Avalanche" />
+              <ChainItem logotypeSrc={avaxLogotype} name="Fantom" />
+              <ChainItem logotypeSrc={avaxLogotype} name="Arbitrum" />
+            </div>
+          </div>
           <div className="col-span-6 space-y-8 text-center">
             <h2 className="text-center text-2xl font-bold">
               Supported blockchains & layer 2
@@ -93,6 +103,20 @@ function Partner({ logotypeSrc = "" }) {
   return (
     <div className="col-span-3 flex justify-center items-center">
       <img src={logotypeSrc} className="opacity-40 w-4/5 h-auto mx-auto" />
+    </div>
+  );
+}
+
+function ChainItem({ logotypeSrc = "", name = "" }) {
+  return (
+    <div className="col-span-3 flex flex-col items-center justify-center">
+      <Image
+        src={logotypeSrc}
+        className="mx-auto border rounded-md "
+        width={64}
+        height={64}
+      />
+      <span className="text-center font-bold mt-2">{name}</span>
     </div>
   );
 }
